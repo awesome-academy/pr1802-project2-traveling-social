@@ -2,10 +2,14 @@ doctype html
 html
   head
     title
-      | Prj2
+      | 
+      = t ".title"
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
+    = link_to t(".en"), locale:"en"
+    span |
+    = link_to t(".vi"), locale:"vi"
     = yield

@@ -1,0 +1,22 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  host: localhost
+  username: root
+  password: 
+  # socket: /var/run/mysqld/mysqld.sock
+  # socket: /tmp/mysql.sock
+development:
+  <<: *default
+  database: prj2
+test:
+  <<: *default
+  database: prj2_test
+
+staging:
+  <<: *default
+
+production:
+  <<: *default
+  database: prj2_production

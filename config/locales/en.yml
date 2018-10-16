@@ -30,4 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  page:
+    index:
+      hello: "Hello world"
+  layouts:
+    application:
+      en: "English"
+      vi: "Vietnamese"
+      title: "Travelling Social"

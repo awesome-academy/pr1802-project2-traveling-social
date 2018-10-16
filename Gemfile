@@ -23,6 +23,8 @@ gem 'mini_magick'
 gem 'ckeditor'
 gem 'friendly_id'
 gem 'cocoon'
+gem 'config'
+gem 'rails-i18n'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 

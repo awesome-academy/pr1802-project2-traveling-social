@@ -1,0 +1,46 @@
+section
+  .gap.gray-bg
+    .container-fluid
+      .row
+        .col-lg-12
+          .row#page-contents
+            .col-lg-3
+            .col-lg-6
+              .central-meta.item
+                .user-post
+                  .friend-info
+                    .friend-name
+                      ins
+                        = link_to @location.name, location_path
+                    .post-meta
+                      = link_to image_tag(@location.thumbnail_url), location_path
+                      .we-video-info
+                        ul
+                          li
+                            span.views[data-toggle="tooltip" title="views"]
+                              i.fa.fa-eye
+                              ins
+                                | 1.2k
+                          li
+                            span.comment[data-toggle="tooltip" title="Comments"]
+                              i.fas.fa-comments
+                              ins
+                                | 52
+                          li
+                            span.like[data-toggle="tooltip" title="like"]
+                              i.fas.fa-heart
+                              ins
+                                | 2.2k
+                          li
+                            span.dislike[data-toggle="tooltip" title="dislike"]
+                              i.fas.fa-heartbeat
+                              ins
+                                | 200
+                      .description
+                        p
+                          = raw @location.description
+                        = link_to t(".new_review"), new_location_review_path(@location), "data-turbolinks" => false
+                        br
+                        = link_to t(".reviews_list"), location_reviews_path(@location)
+                        
+            .col-lg-3

@@ -9,5 +9,12 @@ Rails.application.routes.draw do
     end
     resources :micro_posts
     resources :profiles, only: :show
+    resources :locations, only: :show
+    resources :locations, only: :show do
+      resources :reviews
+    end
+    resources :users, only: :show do
+      resources :reviews
+    end
   end
 end

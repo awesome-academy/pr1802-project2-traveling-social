@@ -1,0 +1,140 @@
+section
+  .gap.gray-bg
+    .container-fluid
+      .row
+        .col-lg-12
+          .row#page-contents
+            .col-lg-3
+            .col-lg-6
+              .central-meta.item
+								.user-post
+									.friend-info
+										figure
+											= link_to image_tag(@review.user.thumbnail_url), user_path(@review.user)
+										.friend-name
+											ins
+												- if @review.present? && @review.user.first_name && @review.user.last_name
+													= link_to (@review.user.first_name + " " + @review.user.last_name), user_path(@review.user)
+											span
+												= t ".published" 
+												= @review.created_at
+										.post-meta
+											- if @review.present? && @review.thumbnail.present?
+												= link_to image_tag(@review.thumbnail_url), user_review_path(@review.user)
+											.we-video-info
+												ul
+													li
+														span.views[data-toggle="tooltip" title="views"]
+															i.fa.fa-eye
+															ins
+																| 1.2k
+													li
+														span.comment[data-toggle="tooltip" title="Comments"]
+															i.fas.fa-comments
+															ins
+																| 52
+													li
+														span.like[data-toggle="tooltip" title="like"]
+															i.fas.fa-heart
+															ins
+																| 2.2k
+													li
+														span.dislike[data-toggle="tooltip" title="dislike"]
+															i.fas.fa-heartbeat
+															ins
+																| 200
+													- if @user.eql?(@review.user)
+														li
+															span.edit[data-toggle="tooltip" title="edit"]
+																= link_to "", edit_location_review_path(@review), title: t(".edit"), class: "far fa-edit", "data-turbolinks" => false
+														li
+															span.delete[data-toggle="tooltip" title="delete"]
+																= link_to "", location_review_path(@review.location, @review), title: t(".delete"), method: :delete, data: { confirm: t(".confirm") }, class: "far fa-trash-alt"
+											.description
+												p
+													= raw @review.content
+								.coment-area
+									ul.we-comet
+										li
+											.comet-avatar
+												img[src="#" alt=""]
+											.we-comment
+												.coment-head
+													h5
+														a[href="#" title=""]
+															| Jason borne
+													span
+														| 1 year ago
+													a.we-reply[href="#" title="Reply"]
+														i.fa.fa-reply
+												p
+													| we are working for the dance and sing songs. this car is very awesome for the youngster. please vote this car and like our post
+											ul.we-comet
+												li
+													.comet-avatar
+														img[src="#" alt=""]
+													.we-comment
+														.coment-head
+															h5
+																a[href="#" title=""]
+																	| alexendra dadrio
+															span
+																| 1 month ago
+															a.we-reply[href="#" title="Reply"]
+																i.fa.fa-reply
+														p
+															| yes, really very awesome car i see the features of this car in the official website of
+												li
+													.comet-avatar
+														img src="#" alt=""
+													.we-comment
+														.coment-head
+															h5
+																a href="#" title=""
+																	| Olivia
+															span
+																| 16 days ago
+															a.we-reply href="#" title="Reply"
+																i.fa.fa-reply
+														p
+															| i like lexus cars, lexus cars are most beautiful with the awesome features, but this car is really outstanding than lexus
+										li
+											.comet-avatar
+												img[src="#" alt=""]
+											.we-comment
+												.coment-head
+													h5
+														a[href="#" title=""]
+															| Donald Trump
+													span
+														| 1 week ago
+													a.we-reply[href="#" title="Reply"]
+														i.fa.fa-reply
+												p
+													| we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel
+										li
+											a.showmore.underline[href="#" title=""]
+												| more comments
+										li.post-comment
+											.comet-avatar
+												img[src="#" alt=""]
+											.post-comt-box
+												form[method="post"]
+													textarea[placeholder="Post your comment"]
+													.add-smiles
+														span.em.em-expressionless[title="add icon"]
+													.smiles-bunch
+														i.em.em---1
+														i.em.em-smiley
+														i.em.em-anguished
+														i.em.em-laughing
+														i.em.em-angry
+														i.em.em-astonished
+														i.em.em-blush
+														i.em.em-disappointed
+														i.em.em-worried
+														i.em.em-kissing_heart
+														i.em.em-rage
+														i.em.em-stuck_out_tongue
+													button[type="submit"]
+            .col-lg-3

@@ -5,6 +5,7 @@ vi:
       browse: "Duyệt"
       news_feed: "Bảng tin"
       my_page: "Trang của tôi"
+      reviews: "Bài đánh giá"
       following: "Đang theo dõi"
       images: "Ảnh"
       events: "Sự kiện"
@@ -100,3 +101,37 @@ vi:
         description: "Giới thiệu:"
         thumbnail: "Hình đại diện:"
         submit: "Đăng"
+  reviews:
+    form:
+      save: "Lưu"
+      name: "Tên"
+      content: "Nội dung"
+      thumbnail: "Ảnh thumbnail"
+      post: "Đăng"
+      upload_thumbnail: "Upload ảnh thumnail"
+      add_a_photo: "Thêm ảnh"
+      remove: "Xóa"
+    review:
+      edit: "Sửa"
+      delete: "Xóa"
+      confirm: "Bạn có chắc chắn muốn xóa?"
+    show:
+      published: "Ngày đăng: "
+    edit:
+      edit_review: "Sửa Đánh giá"
+    new:
+      new_review: "Viết Đánh giá"
+    index:
+      publish: "Đăng"
+    created:
+      review_created: "Đã tạo mới Đánh giá!"
+      review_created_error: "Lỗi tạo mới!"
+    update:
+      update_review: "Đã cập nhật Đánh giá"
+    destroy:
+      confirm: "Bạn có chắc chắn muốn xóa?"
+      review_deleted: "Đã xóa!"
+  locations:
+    show:
+      new_review: "Viết Đánh giá"
+      reviews_list: "Xem các Đánh giá"

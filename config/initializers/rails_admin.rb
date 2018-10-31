@@ -25,10 +25,10 @@ RailsAdmin.config do |config|
   # config.show_gravatar = true
 
   config.actions do
-    dashboard do 
+    dashboard do
       statistics false
-    end                     
-    index                        
+    end        
+    index
     new do
       except %w(MicroPost Event Comment Review)
     end
@@ -144,5 +144,4 @@ RailsAdmin.config do |config|
     label_plural "Status"
     navigation_icon 'icon-file'
   end
-
 end

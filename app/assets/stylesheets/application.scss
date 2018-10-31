@@ -55,7 +55,7 @@
     }
   }
   input{
-    height: 1.9rem;
+    height: 35px;
   }
   .control-label{
     color: #088dcd;
@@ -205,4 +205,8 @@ label{
   .active{
     opacity: 0.5;
   }
+}
+
+label.review_thumbnail {
+  margin: 0!important;
 }

@@ -12,6 +12,12 @@ Rails.application.routes.draw do
       resources :downvotes, only: [:create, :destroy]
     end
     resources :profiles, only: :show
-    resources :locations
+    resources :locations, only: :show
+    resources :locations, only: :show do
+      resources :reviews
+    end
+    resources :users, only: :show do
+      resources :reviews
+    end
   end
 end

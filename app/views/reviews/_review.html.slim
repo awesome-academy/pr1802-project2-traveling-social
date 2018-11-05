@@ -1,0 +1,51 @@
+.central-meta.item
+  .user-post
+    .friend-info
+      figure
+        = link_to image_tag(review.user.thumbnail_url), user_path(review.user)
+      .friend-name
+        ins
+          a href="" title=""
+            = review.user.email
+        span
+          | published:
+          = review.created_at
+      .description
+        .post-meta
+          .linked-image.align-left
+            - if review.thumbnail?
+              = link_to image_tag(review.thumbnail_url), location_review_path(review.location, review)
+          .detail
+            span
+              = link_to review.name, location_review_path(review.location, review)
+            p
+              = raw review.content
+          .we-video-info
+            ul
+              li
+                span.views data-toggle="tooltip" title="views"
+                  i.fa.fa-eye
+                  ins
+                    | 1.2k
+              li
+                span.comment data-toggle="tooltip" title="Comments"
+                  i.fas.fa-comments
+                  ins
+                    | 52
+              li
+                span.like data-toggle="tooltip" title="like"
+                  i.fas.fa-heart
+                  ins
+                    | 2.2k
+              li
+                span.dislike data-toggle="tooltip" title="dislike"
+                  i.fas.fa-heartbeat
+                  ins
+                    | 200
+              - if @user.eql?(review.user)
+                li
+                  span.edit[data-toggle="tooltip" title="edit"]
+                    = link_to "", edit_location_review_path(review.location, review), title: t(".edit"), class: "far fa-edit", "data-turbolinks" => false
+                li
+                  span.delete[data-toggle="tooltip" title="delete"]
+                    = link_to "", location_review_path(review.location, review), title: t(".delete"), method: :delete, data: { confirm: t(".confirm") }, class: "far fa-trash-alt"

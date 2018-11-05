@@ -58,7 +58,7 @@ a{
     }
   }
   input{
-    height: 1.9rem;
+    height: 35px;
   }
   .control-label{
     color: #088dcd;
@@ -296,4 +296,7 @@ a.ui-button:active,
     color: #007bff;
     margin-left: 5px;
   }
+
+label.review_thumbnail {
+  margin: 0!important;
 }

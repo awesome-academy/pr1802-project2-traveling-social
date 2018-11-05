@@ -4,6 +4,7 @@ en:
       hello: "Hello world"
       browse: "Browse"
       news_feed: "News Feed"
+      reviews: "Reviews"
       my_page: "My Page"
       following: "Following"
       images: "Images"
@@ -196,3 +197,37 @@ en:
     form:
       dislike: "Dislike"
       disliked: "Disliked"
+  reviews:
+    form:
+      save: "Save"
+      name: "Name"
+      content: "Content"
+      thumbnail: "Thumbnail"
+      post: "Post"
+      upload_thumbnail: "Upload thumbnail"
+      add_a_photo: "Add a photo"
+      remove: "Remove"
+    review:
+      edit: "Edit"
+      delete: "Delete"
+      confirm: "Are you sure?"
+    show:
+      published: "Published: "
+    edit:
+      edit_review: "Edit review"
+    new:
+      new_review: "New review"
+    index:
+      publish: "Publish"
+    created:
+      review_created: "Review created!"
+      review_created_error: "Review created error"
+    update:
+      update_review: "Review updated!"
+    destroy:
+      confirm: "Are you sure?"
+      review_deleted: "Review deleted!"
+  locations:
+    show:
+      new_review: "New Review"
+      reviews_list: "Reviews List"

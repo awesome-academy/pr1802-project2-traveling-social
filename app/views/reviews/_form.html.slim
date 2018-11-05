@@ -1,0 +1,24 @@
+= form_with(model: [:location, @review], scope: :review, local: true) do |f|
+  .form-group.half
+    = f.text_field :name, required: "required"
+    = f.label :name, t(".name"), class: "control-label"
+    i.mtrl-select
+  .form-group.half.text-center
+    label.file-wrapper.review_thumbnail[for="review_thumbnail"]
+      i.far.fa-image
+      = t ".upload_thumbnail"
+    = f.file_field :thumbnail, class: "input-file", id: "review_thumbnail"
+    span.file-name
+  .form-group
+    = f.text_area :content, class: "ckeditor", id: "textarea", required: "required"
+    = f.label :content, t(".content"), class: "control-label"
+  .form-group
+    = f.label :images, class: "col-md-4 control-label"
+  .form-group
+    table.user-photo-form.table-striped
+      tbody
+        = f.fields_for :images do |image|
+          = render "image_fields", f: image
+        = link_to_add_association (t ".add_a_photo"), f, :images, class: "btn"
+  .submit-btns
+    = f.button t(".post"), class: "btn"

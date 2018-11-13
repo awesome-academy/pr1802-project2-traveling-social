@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_location, only: [:create, :new]
+  before_action :set_location, except: [:show, :update, :destroy]
   before_action :set_review, except: [:create, :new, :index]
   def new
     @review = @location.reviews.build
@@ -63,7 +63,7 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit :name, :content, :thumbnail,
+    params.require(:review).permit :name, :content, :thumbnail, :rating,
       images_attributes: [:id, :image, :image_cache, :_destroy, :user_id]
   end
 end

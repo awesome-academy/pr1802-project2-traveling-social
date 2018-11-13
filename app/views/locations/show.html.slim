@@ -32,6 +32,10 @@
             i.far.fa-eye
             = t ".location-views"
             = @location.hits
+          li
+            i.fas.fa-star
+            = t ".rate"
+            = @location.reviews.average(:rating).present? ? number_with_precision(@location.reviews.average(:rating), precision: 1) : 0 
         - if @location.images.present?
           .owl-carousel.owl-theme.show-slider
             - @location.images.each do |image|
@@ -44,4 +48,3 @@
           #map[data=(@location.address)["location"]]
         .social-share
           = social_share_button_tag @location.name
-        

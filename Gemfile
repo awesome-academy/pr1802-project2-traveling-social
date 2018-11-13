@@ -38,6 +38,7 @@ gem 'cloudinary'
 gem 'pagy'
 gem 'gmaps4rails'
 gem "paranoia", "~> 2.2"
+gem 'ratyrate'
 
 gem 'rails_admin'
 gem 'rails_admin_google_map'

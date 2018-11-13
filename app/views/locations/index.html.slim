@@ -68,4 +68,8 @@
                       i.fas.fa-check
                       = t ".location-checkin"
                       = location.micro_posts.count
+                    p.card-text
+                      i.fas.fa-star
+                      = t ".location-rate"
+                      = location.reviews.average(:rating).present? ? number_with_precision(location.reviews.average(:rating), precision: 1) : 0
       == pagy_nav @pagy if @pagy.present?

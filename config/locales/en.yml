@@ -235,6 +235,7 @@ en:
       views: "Views"
       comments: "Comments"
       view-location: "View location"
+      no_rate: "None"
     show:
       published: "Published: "
       delete: "Delete"
@@ -269,11 +270,12 @@ en:
       location-checkin: "Total check-in: "
       location-checkin-user: "Total users check-in: "
       location-views: "Total views: "
+      rate: "Rate: "
     index:
       all-locations: "All locations"
       location-review: "Total reviews: "
       location-checkin: "Total check-in: "
-      location-popular: "Popular !"
+      location-rate: "Location rate: "
       do-you-mean: "Do you mean "
   cities:
     index:

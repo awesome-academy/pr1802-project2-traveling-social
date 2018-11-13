@@ -19,6 +19,8 @@
 //= require jquery-ui
 //= require ckeditor/init
 //= require cocoon
+//= require jquery.raty
+//= require ratyrate
 //= require gmaps/google
 //= require social-share-button
 //= require owl.carousel

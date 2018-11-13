@@ -1,4 +1,5 @@
 class Location < ApplicationRecord
+  ratyrate_rateable "overall"
   belongs_to :user
   belongs_to :city, optional: true, inverse_of: :locations
   has_many :reviews, dependent: :destroy
@@ -29,4 +30,5 @@ class Location < ApplicationRecord
 
   serialize :address, JSON
   scope :search_location, -> (search_content) {where("name like ?","%#{search_content}%")}
+  
 end

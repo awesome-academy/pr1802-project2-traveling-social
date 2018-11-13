@@ -145,6 +145,22 @@ RailsAdmin.config do |config|
     visible false
   end
 
+  config.model Punch do
+    visible false
+  end
+
+  config.model Rate do
+    visible false
+  end
+
+  config.model RatingCache do
+    visible false
+  end
+
+  config.model OverallAverage do
+    visible false
+  end
+
   config.model MicroPost do
     label "Status" 
     label_plural "Status"

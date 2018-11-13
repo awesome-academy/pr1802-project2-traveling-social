@@ -119,6 +119,7 @@ vi:
       delete: "Xóa"
       confirm: "Bạn có chắc chắn muốn xóa?"
       published: "Ngày đăng: "
+      no_rate: "Trống"
     show:
       published: "Ngày đăng: "
     edit:
@@ -139,3 +140,4 @@ vi:
     show:
       new_review: "Viết Đánh giá"
       reviews_list: "Xem các Đánh giá"
+      rate: "Điểm: "

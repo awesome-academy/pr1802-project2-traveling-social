@@ -21,6 +21,11 @@
               ul.meta-total
                 li
                   span.views[data-toggle="tooltip" title="#{t ".views"}"]
+                    i.fas.fa-star
+                    ins
+                      = @review.rating
+                li
+                  span.views[data-toggle="tooltip" title="#{t ".views"}"]
                     i.fa.fa-eye
                     ins
                       = @review.hits
@@ -36,7 +41,7 @@
                 - if current_user.eql? @review.user
                   li
                     span.edit[data-toggle="tooltip" title="edit"]
-                      = link_to "", edit_location_review_path(@location, @review), title: t(".edit"), class: "far fa-edit", "data-turbolinks": false
+                      = link_to "", edit_location_review_path(@review.location, @review), title: t(".edit"), class: "far fa-edit", "data-turbolinks": false
                   li
                     span.delete[data-toggle="tooltip" title="delete"]
                       = link_to "", location_review_path(@location, @review), title: t(".delete"), method: :delete, data: { confirm: t(".confirm") }, class: "far fa-trash-alt"

@@ -20,6 +20,11 @@
           ul.meta-total
             li
               span.views data-toggle="tooltip" title="#{t ".views"}"
+                i.fas.fa-star
+                ins
+                  = review.rating.present? ? review.rating : t(".no_rate")
+            li
+              span.views data-toggle="tooltip" title="#{t ".views"}"
                 i.fa.fa-eye
                 ins
                   = review.hits

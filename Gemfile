@@ -21,6 +21,7 @@ gem 'owlcarousel-rails'
 gem 'punching_bag'
 gem 'searchkick'
 gem 'chartkick'
+gem 'draper'
 
 gem 'devise'
 gem 'cancancan'

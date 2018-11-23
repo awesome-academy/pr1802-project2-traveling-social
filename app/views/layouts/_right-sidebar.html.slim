@@ -12,7 +12,4 @@ aside.sidebar.static
             .friend-meta
               h4
                 = link_to user_path following.id do
-                  - if following.first_name.present?
-                    = "#{following.first_name} #{following.last_name}"
-                  - else
-                    = following.email
+                  = following.decorate.full_name_or_email

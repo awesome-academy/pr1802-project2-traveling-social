@@ -2,10 +2,7 @@ li id="comment-item-#{comment.id}"
   div class="comment-wrap" id="comment-#{comment.id}"
     h5.comment-author
       = link_to user_path(comment.user) do
-        - if comment.user.first_name.present?
-          = comment.user.first_name + " " + comment.user.last_name
-        - else
-          = comment.user.email
+        = comment.user.decorate.full_name_or_email
     small
       = t ".submitted"
       = time_ago_in_words(comment.created_at)

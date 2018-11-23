@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def index
     @micro_post = MicroPost.new
-    @pagy, @micro_posts = pagy_array MicroPost.all_status(current_user), 
+    @pagy, @micro_posts = pagy_array MicroPost.all_status(current_user).decorate, 
       items: Settings.micro_posts.per_page
     @user = current_user
     return unless params[:id_status]

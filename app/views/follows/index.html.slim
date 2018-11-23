@@ -31,7 +31,7 @@ section
                             .nearly-pepls
                               figure
                                 = link_to user_path follower.id do
-                                  = image_tag follower.thumbnail.present? ? follower.thumbnail_url : "avatar.png"
+                                  = image_tag follower.thumbnail.present? ? follower.thumbnail_url : Settings.avatar
                               .pepl-info
                                 h4
                                   = link_to user_path follower.id do
@@ -47,7 +47,7 @@ section
                             .nearly-pepls
                               figure
                                 = link_to user_path following.id do
-                                  = image_tag following.thumbnail.present? ? following.thumbnail_url : "avatar.png"
+                                  = image_tag following.thumbnail.present? ? following.thumbnail_url : Settings.avatar
                               .pepl-info
                                 h4
                                   = link_to user_path following.id do

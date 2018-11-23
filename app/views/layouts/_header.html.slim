@@ -19,4 +19,4 @@ div
             i.fas.fa-sign-out-alt
       .user-img
         = link_to user_path(current_user) do
-          = image_tag current_user.thumbnail.present? ? current_user.thumbnail_url : "avatar.png"
+          = image_tag current_user.thumbnail.present? ? current_user.thumbnail_url : Settings.avatar

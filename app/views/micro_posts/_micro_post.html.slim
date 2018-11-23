@@ -2,14 +2,11 @@ div class="central-meta .item" id="status-#{micro_post.id}"
   .user-post
     .friend-info
       figure
-        = image_tag micro_post.user.thumbnail.present? ? micro_post.user.thumbnail_url : "avatar.png"
+        = image_tag micro_post.user.thumbnail.present? ? micro_post.user.thumbnail_url : Settings.avatar
       .friend-name
         ins
           a[href="time-line.html" title=""]
-            - if micro_post.user.first_name.present?
-              = micro_post.user.first_name + " " + micro_post.user.last_name
-            - else
-              = micro_post.user.email
+            = micro_post.user.full_name_or_email
         = render "micro_posts/micro_post-link", micro_post: micro_post
         span
           = time_ago_in_words micro_post.created_at

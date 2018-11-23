@@ -1,7 +1,7 @@
 .central-meta.item
   .new-postbox
     figure
-      = image_tag @user.thumbnail.present? ? @user.thumbnail_url : "avatar.png"
+      = image_tag @user.thumbnail.present? ? @user.thumbnail_url : Settings.avatar
     .newpst-input
       = form_for @micro_post, remote: true do |f|
         = render 'shared/error_validate_msg', object: f.object

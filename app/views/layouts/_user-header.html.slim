@@ -21,16 +21,13 @@ section
         .col-lg-2.col-sm-3
           .user-avatar
             figure
-              = image_tag @user.thumbnail.present? ? @user.thumbnail_url : "avatar.png"
+              = image_tag @user.thumbnail.present? ? @user.thumbnail_url : Settings.avatar
         .col-lg-10.col-sm-9
           .timeline-info
             ul
               li.admin-name
                 h5
-                  - if @user.first_name.present?
-                    = @user.first_name + " " + @user.last_name
-                  - else
-                    = @user.email
+                  = @user.full_name_or_email
               li
                 = link_to t(".timelines"), user_path(@user.id)
                 = link_to t(".photos"), user_images_path(@user.id)
